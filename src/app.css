@@ -763,6 +763,22 @@ h1 {
   animation: blink 0.9s steps(2) infinite;
 }
 
+.secret-entry {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0 3px;
+  margin-left: 1px;
+  transition: all 0.2s ease;
+}
+
+.secret-entry:hover {
+  color: var(--hot-pink);
+  text-shadow: 0 0 10px var(--hot-pink);
+  animation-duration: 0.3s;
+}
+
 /* Window positions + parallax */
 .window-1 {
   top: 12%;

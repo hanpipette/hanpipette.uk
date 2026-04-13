@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { push } from 'svelte-spa-router';
+
   // ── State ─────────────────────────────────────
   let mx = $state(0);
   let my = $state(0);
@@ -221,7 +223,12 @@
       <p>> <span class="txt-red">CRITICAL:</span> 依存度 99.9%</p>
       <p>> <span class="txt-warn">WARN:</span> 48時間の睡眠不足</p>
       <p>> <span class="txt-red">FATAL:</span> 自己肯定感 = 0</p>
-      <p>> 応答なし...<span class="cursor-blink">▊</span></p>
+      <p>&gt; 応答なし...<button
+        type="button"
+        class="cursor-blink secret-entry"
+        onclick={(e) => { e.stopPropagation(); push('/chat'); }}
+        aria-label="secret"
+      >▊</button></p>
     </div>
   </div>
 
